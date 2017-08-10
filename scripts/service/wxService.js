@@ -8,21 +8,21 @@ redApp.factory('WxService', ["UtilService", 'HttpService', 'MobileService','$roo
     /**
      * 请求配置信息
      */
-      $.when(
-        $.ajax({
-          type: "POST",
-          url:EnumSet.serverApi.baseUrl+EnumSet.serverApi.apiUrl.wechat.config,
-          dataType: "json",
-          beforeSend: function () {
-          },
-          complete: function () {
-          }
-        })
-      ).done(function(data) {
-          callWeixinApi(data);
-        }).fail(function () {
-          UtilService.messager.tip("获取微信接口地址错误！")
-        })
+      // $.when(
+      //   $.ajax({
+      //     type: "POST",
+      //     url:EnumSet.serverApi.baseUrl+EnumSet.serverApi.apiUrl.wechat.config,
+      //     dataType: "json",
+      //     beforeSend: function () {
+      //     },
+      //     complete: function () {
+      //     }
+      //   })
+      // ).done(function(data) {
+      //     callWeixinApi(data);
+      //   }).fail(function () {
+      //     UtilService.messager.tip("获取微信接口地址错误！")
+      //   })
 
       /*HttpService.httpRequest('wxConfig', {}, callWeixinApi, function(){UtilService.messager.tip('获取接口配置信息失败，部分功能可能暂时无法使用！')});*/
 
