@@ -1,0 +1,18 @@
+<div class="getSuccess" receive-result-drct>
+  <div class="m-banner">
+    <p class="txt">恭喜，您的红包已放入小豆苗，请打开APP查看~现在进入小豆苗还有机会赢取iPad、辅食机等大奖哦！</p>
+  </div>
+  <div class="m-twoBtn-box" ng-show="ending=='wx'">
+    <div class="u-fd"></div>
+    <div class="u-btn"><a  href="http://t.cn/RJqkveu" onclick="_czc.push(['_trackEvent','领取成功页面按钮','点击量','去小豆苗领取']);">去小豆苗领取</a></div>
+    <div class="u-btn"><a href="javascript:void(0)" ng-click="callWxShare()"  onclick="_czc.push(['_trackEvent','领取成功页面按钮','点击量','我要发红包']);">邀请好友赚红包</a></div>
+  </div>
+  <div class="m-oneBtn-box" ng-show="ending!='wx'">
+    <div class="u-btn"><a  href="http://t.cn/RJqkveu"  onclick="_czc.push(['_trackEvent','领取成功页面按钮','点击量','去小豆苗领取']);">去小豆苗领取</a></div>
+  </div>
+  <div class="tipBox">
+    <a class="rule" ui-sref="activityRule">活动规则<i></i></a>
+    <p class="ask">对活动有疑问？请联系 <a href="javascript:void(0)" ng-click="callPhone()">小豆苗客服</a></p>
+  </div>
+  <div class="m-footer"></div>
+</div>

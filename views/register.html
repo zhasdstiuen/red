@@ -1,0 +1,64 @@
+<div class="register"  ng-show="$state.current.name=='luckyPacket.register'">
+    <div class="m-tip">
+        <i></i>
+        <span>您需要先注册并关联宝宝，才能顺利领取红包哦！</span>
+    </div>
+    <div class="m-inputBox">
+        <ul>
+            <li class="tel">
+                <i></i>
+                <input type="tel" placeholder="请输入手机号码" ng-model="telNum" ng-change="checkTel()"/>
+            </li>
+            <li class="checkcode">
+                <i></i>
+                <input type="tel" placeholder="请输入验证码" ng-model="checkCode"/>
+                <div class="u-getcode" ng-class="{true: 'active', false: 'inactive'}[telOk&&!timeCount]" ng-click="getCode()"  ng-bind="codeBtnText">获取验证码</div>
+            </li>
+        </ul>
+    </div>
+    <div class="u-nextBtn" ng-class="{true:'yellowNext',false:'greyNext'}[telOk&&isGetCode&&checkCode!=''&&checkCode!=undefined]" ng-click="toValidateCode()">下一步</div>
+    <p>注册即同意 <a ui-sref=".userAgreement">《用户协议》</a></p>
+    <a class="u-loginNow" href="http://t.cn/RJqkveu"><i class="u-warning"></i>已经是小豆苗用户，立即登录 <i class="u-jt"></i></a>
+    <div class="m-footer" id="m-footer">
+        <div class="u-process">
+            <span class="u-big yellow">1</span>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <span class="u-big">2</span>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <span class="u-big">3</span>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <span class="u-big">4</span>
+        </div>
+        <div class="u-processTxt">
+            <span class="yellow register">注册</span><span class="connect">同步宝宝信息</span><span class="get">获取红包</span><span class="go">去小豆苗领取 </span>
+        </div>
+    </div>
+</div>
+<ui-view></ui-view>

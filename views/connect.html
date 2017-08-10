@@ -1,0 +1,86 @@
+<div class="connect"  ng-show="$state.current.name=='luckyPacket.register.password.connect'" connect-drct>
+    <div class="m-inputBox" id="connect-form">
+        <ul>
+            <li class="region">
+              <i></i>
+              <span ng-click="showRegion()" class="regionAddress" ng-bind="regionAddress">请输入接种点所在地</span>
+            </li>
+            <li class="relationship">
+                <i></i>
+                <select name="relationship" ng-model="connectFormInfo.relation">
+                  <option value='' disabled selected style='display:none;'>请选择我与宝宝的关系</option>
+                  <option value="0">爸爸</option>
+                  <option value="1">妈妈</option>
+                  <option value="2">爷爷</option>
+                  <option value="3">奶奶</option>
+                  <option value="4">姑姑</option>
+                  <option value="5">叔叔</option>
+                  <option value="6">外公</option>
+                  <option value="7">外婆</option>
+                </select>
+            </li>
+            <li class="birthday">
+                <i></i>
+                <span  ng-bind="connectFormInfo.birthday?'':'宝宝生日'"></span>
+                <input type="date" id="date" ng-model="connectFormInfo.birthday"/>
+            </li>
+            <li class="code" ng-show="useChildNo" id="code">
+                <i></i>
+                <input type="tel" placeholder="接种本上的条形码或儿童编码" ng-model="connectFormInfo.childNo"/>
+                <div class="u-scanner" ng-click="wxScanQRCode()" ng-show="ending=='wx'"><i></i>扫码</div>
+            </li>
+            <li class="reserveMobile" ng-show="!useChildNo">
+              <i></i>
+              <input type="tel" placeholder="宝宝建档时预留的手机号码" ng-model="connectFormInfo.reserveMobile"/>
+            </li>
+        </ul>
+    </div>
+    <div class="m-tipBox clearfix" ng-click="connectFormInfo.agreeState=!connectFormInfo.agreeState">
+        <div class="left"><i ng-class="{true: 'active', false: 'inactive'}[connectFormInfo.agreeState]"></i></div>
+        <div class="right">若需进一步服务，则须同意小豆苗获取宝宝身份识别信息、接种记录等预防接种必要信息。小豆苗将采取合理措施保护您的个人信息。</div>
+    </div>
+    <div class="m-agreeBtn" ng-click="connectBaby()" ng-class="{true:'clickable'}[btn_clickable]">同意并同步</div>
+    <p>也可以试试 <a href="javascript:void(0)" ng-click="changeConnectWay()" ng-bind="connectWay">用手机号同步</a></p>
+    <div class="m-footer" id="m-footer2">
+        <div class="u-process">
+            <span class="u-big yellow">1</span>
+            <ul class="yellow">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <span class="u-big yellow">2</span>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <span class="u-big">3</span>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <span class="u-big">4</span>
+        </div>
+        <div class="u-processTxt">
+            <span class="yellow register">注册</span><span class="yellow connect">同步宝宝信息</span><span class="get">获取红包</span><span class="go">去小豆苗领取 </span>
+        </div>
+    </div>
+</div>
+<city-picker callback="isDockRegion" ng-show="currentRegion=='province'||currentRegion=='city'||currentRegion=='area'"></city-picker>

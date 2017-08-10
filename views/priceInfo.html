@@ -1,0 +1,23 @@
+<div class="priceInfo" ng-show="$state.current.name=='drawPage.priceInfo'">
+    <div class="m-tip">
+        <i></i>
+        <span>工作人员将按照联系地址寄送奖品，请务必保证信息真实</span>
+    </div>
+    <div class="m-inputBox">
+        <ul>
+            <li class="name">
+                <i></i>
+                <input type="text" placeholder="姓名" ng-model="name"/>
+            </li>
+            <li class="tel">
+                <i></i>
+                <input type="text" placeholder="手机号码" ng-model="tel" ng-blur="checkTel()"/>
+            </li>
+            <li class="address">
+                <i></i>
+                <input type="text" placeholder="详细地址" ng-model="address"/>
+            </li>
+        </ul>
+    </div>
+    <div class="m-submitBtn" ng-class="{true:'yellow',false:'grey'}[name!=undefined&&name!=''&&address!=undefined&&address!=''&&telOk]" ng-click="name!=undefined&&name!=''&&address!=undefined&&address!=''&&telOk&&submitInfo()">提交</div>
+</div>

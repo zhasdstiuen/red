@@ -1,0 +1,21 @@
+<div class="getFail" receive-result-drct>
+    <div class="m-head">
+        <div class="header-bg">
+            <div class="u-packetfail"></div>
+            <p class="u-getfail"></p>
+            <p class="txt" ng-bind="failText"></p>
+        </div>
+    </div>
+    <div class="m-middle">
+      <div class="twoBtn-box" ng-show="ending=='wx'">
+        <div class="u-btn goXdm"><a href="http://t.cn/RJqkveu" onclick="_czc.push(['_trackEvent','领取失败页面按钮','点击量','去小豆苗看看']);">去小豆苗看看</a></div>
+        <div class="u-btn goInvite"><a  href="javascript:void(0)" ng-click="callWxShare()"  onclick="_czc.push(['_trackEvent','领取失败页面按钮','点击量','邀请好友赚红包']);">邀请好友赚红包</a></div>
+      </div>
+      <div class="oneBtn-box" ng-show="ending!='wx'">
+        <div class="u-btn"><a  href="http://t.cn/RJqkveu" onclick="_czc.push(['_trackEvent','领取失败页面按钮','点击量','去小豆苗看看']);">去小豆苗邀请好友</a></div>
+      </div>
+        <a class="rule" ui-sref="activityRule">活动规则<i></i></a>
+        <p class="ask">对活动有疑问？请联系 <a href="javascript:void(0)" ng-click="callPhone()">小豆苗客服</a></p>
+    </div>
+    <div class="m-footer"></div>
+</div>

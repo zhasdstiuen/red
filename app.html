@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>邀请送红包</title>
+    <meta content="小豆苗,疫苗接种,深圳三代人,小豆苗app,疫苗宝,免疫接种,接种助手" name="keywords">
+    <meta name="description" content="小豆苗 疫苗接种好帮手,最好用的疫苗接种工具,免疫接种的实时助手,实用的疫苗小工具">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <!-- build:css(.tmp) styles/vendor.css -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <script>
+      function setHtmlFontsize(){
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+      }
+      setHtmlFontsize();
+      // 当旋转屏幕时，重新设置页面的根fontsize
+      window.onresize = function(){
+          setHtmlFontsize();
+      }
+    </script>
+    <!--线上环境统计ID 1261250125 ,测试环境ID 1261153887-->
+    <!-- <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan  style='display:none' id='cnzz_stat_icon_1261250125'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261250125' type='text/javascript'%3E%3C/script%3E"));</script> -->
+    <!--测试环境start-->
+<!--
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan  style='display:none'  id='cnzz_stat_icon_1261153887'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261153887' type='text/javascript'%3E%3C/script%3E"));</script>
+-->
+    <!--测试环境end-->
+    <!-- <script>
+      //声明_czc对象:
+      var _czc = _czc || [];
+      //绑定siteid，请用您的siteid替换下方"XXXXXXXX"部分
+      _czc.push(["_setAccount", "1261250125"]);
+      var pageStatistics = function(params){
+        _czc.push(["_trackEvent"].concat(params));
+      }
+    </script> -->
+  </head>
+  <body ng-app="redApp">
+
+    <div class="page" id="page" common-drct>
+      <div ui-view class="view"></div>
+    </div>
+    <loading></loading>
+    <div class="mask" id="init_mask"><i class="v_m"></i><div class="loading" id="loading"><img src="images/ico-spinner.png" class="Rotation"/><div>加载中</div></div></div>
+
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <!-- build:js scripts/vendor.js -->
+    <script src="scripts/lib/jquery-3.1.1.min.js"></script>
+    <script src="scripts/lib/angular.min.js"></script>
+    <script src="scripts/lib/angular-ui-router.min.js"></script>
+    <script src="scripts/lib/xdmNative.js"></script>
+    <script src="scripts/lib/lottery.js"></script>
+    <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/service/enumSet.js"></script>
+    <script src="scripts/service/httpService.js"></script>
+    <script src="scripts/service/httpInterceptor.js"></script>
+    <script src="scripts/service/utilService.js"></script>
+    <script src="scripts/service/mobileService.js"></script>
+    <script src="scripts/service/wxService.js"></script>
+    <script src="scripts/directive/commonDrct.js"></script>
+    <script src="scripts/directive/city-picker.js"></script>
+    <script src="scripts/directive/lotteryDrct.js"></script>
+    <script src="scripts/directive/prizeListDrct.js"></script>
+    <script src="scripts/controllers/prizeInfoCtrl.js"></script>
+    <script src="scripts/controllers/indexCtrl.js"></script>
+    <script src="scripts/controllers/registerCtrl.js"></script>
+    <script src="scripts/controllers/drawCtrl.js"></script>
+    <script src="scripts/controllers/luckyPacketCtrl.js"></script>
+    <script src="scripts/controllers/passwordCtrl.js"></script>
+    <script src="scripts/controllers/connectCtrl.js"></script>
+    <script src="scripts/directive/connectDrct.js"></script>
+    <script src="scripts/directive/receiveResultDrct.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

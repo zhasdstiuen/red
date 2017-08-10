@@ -1,0 +1,31 @@
+<div class="index-page"  ng-show="$state.current.name=='app'">
+    <div class="m-head">
+        <!--<img src="images/picture_xjhb.png" alt="现金红包"/>-->
+        <div class="u-xjhb">
+            <div class="u-none"></div>
+            <div class="u-ruletxt" ui-sref="app.activityRule">活动规则 <i></i></div>
+            <div class="u-leftpacket">还剩 <span class="u-leftnum" ng-bind="leftnum"></span> 个红包</div>
+        </div>
+
+    </div>
+    <div class="m-middle">
+        <div class="u-getpacketbox">
+            <a id="inviteWay" ng-click="shareToFriend()">邀请好友赚红包</a>
+        </div>
+        <div class="u-prize">
+            <p ng-if="nonePrize==1">
+                <span>我获得的奖励：</span>
+                <span ng-bind="bribery"></span>
+                <span>个红包，</span>
+                <span ng-bind="prize"></span>
+                <span>件奖品</span>
+            </p>
+            <p ng-if="nonePrize==0">
+                <span>还没有获得红包，赶紧去邀请朋友赚红包吧</span>
+            </p>
+        </div>
+        <a class="u-checkreword" href="yeemiao://activity/myreward">查看奖励</a>
+    </div>
+    <div class="m-footer"></div>
+</div>
+<ui-view></ui-view>

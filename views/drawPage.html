@@ -1,0 +1,31 @@
+<div class="drawPage" ng-show="$state.current.name=='drawPage'">
+    <div class="m-head">
+    </div>
+    <div class="m-middle">
+        <div class="line"></div>
+        <div class="prizeListBox">
+            <ul id="prizeList" prize-list-drct>
+                <li ng-repeat="showBriberry in showBriberryList">恭喜 <span>{{showBriberry.name}}</span> <span class="f-r">抽中{{showBriberry.message}}</span></li>
+            </ul>
+        </div>
+        <div class="u-zpBox" lottery-drct>
+            <div class="u-zp" >
+            </div>
+            <div class="u-zp-zz" ng-click="startdraw()">
+                <div class="u-start"></div>
+            </div>
+        </div>
+    </div>
+    <div class="m-footer">
+        <h3>抽奖规则</h3>
+        <p>1. 一个红包可换取一次抽奖资格，抽奖获得的红包不能再换取抽奖资格。</p>
+        <p>2. 抽奖获得的现金红包显示在“我的-我的奖励-我的红包”中，领取现金红包请输入支付宝账号，72小时后将发放到支付宝账户。</p>
+        <p>3. 领取实物奖品请如实填写收件地址、收件人和联系电话，如未填写真实、准确的信息，由此造成的损失由获奖人自行承担。</p>
+        <p>4. 抽奖所得奖品或红包的领取有效期为发放日起的30天内，逾期则视为放弃领取。</p>
+        <p>5. 实物奖品将会在活动结束后的一周内发放。</p>
+        <p>6. 本抽奖规则未规定的，以本次活动规则为准。</p>
+        <p>7. 深圳三代人科技有限公司保留在法律允许的范围内对本活动的解释权。</p>
+        <p>8．本活动与苹果公司无关。</p>
+    </div>
+</div>
+<ui-view></ui-view>

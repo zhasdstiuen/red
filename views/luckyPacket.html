@@ -1,0 +1,35 @@
+<div class="luckypacket" ng-show="$state.current.name=='luckyPacket'">
+    <div class="m-head">
+        <img src="images/picture_head_db.png" alt="福袋"/>
+        <div class="board"><span class="name" ng-bind="nickName"></span></div>
+        <img src="images/picture_font_1.png" class="u-friend" alt="您的好友"/>
+        <img src="images/picture_font_2.png" class="u-sendfd" alt="送您一份宝宝福袋"/>
+        <div class="redcard">
+            <p class="mrt-2">16堂在线育儿课程</p>
+            <p class="txt-mid">58位专家育儿指导</p>
+            <p>还有机会赢得ipad mini、宝宝辅食机等大奖</p>
+        </div>
+    </div>
+    <div class="m-middle">
+        <div class="u-receivebox">
+            <a href="javascript:void(0)" ng-click="checkPacket()" >立即领取</a>
+        </div>
+        <p class="rule" ui-sref="activityRule">活动规则<i></i></p>
+        <img src="images/picture_xdm.png" alt="小豆苗" class="u-xdm"/>
+        <div class="u-xy">
+            <p>宝宝预防接种好管家</p>
+        </div>
+        <ul>
+            <li>同步记录随时查</li>
+            <li>自动提醒不遗忘</li>
+            <li>预约打针不排队</li>
+        </ul>
+        <ul>
+            <li>在线课堂学知识</li>
+            <li>专业医生来答疑</li>
+            <li>百万宝妈同交流</li>
+        </ul>
+    </div>
+    <div class="m-footer"></div>
+</div>
+<ui-view></ui-view>
